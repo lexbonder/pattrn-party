@@ -10,6 +10,15 @@ const toggleTab = event => {
   $pages[index].classList.add('accordion__page--selected')
 }
 
-$tabs.on('click', toggleTab)
+$tabs.on('click', toggleTab);
+
+const $menu = $('.header-bar__menu');
+
+const toggleNav = () => {
+  $('.header-bar__link').toggleClass('header-bar__link--hide');
+  $('.header-bar').toggleClass('header-bar--small');
+}
+
+$menu.on('click', toggleNav);
 
 
